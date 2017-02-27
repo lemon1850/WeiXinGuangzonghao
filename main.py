@@ -4,7 +4,7 @@ import hashlib
 
 app = Flask(__name__)
 
-@app.route('/wx', methods=['POST'])
+@app.route('/wx', methods=['GET'])
 def wx():
     print(request.form.get("a"))
     print(request.form.get("a"))
@@ -13,8 +13,9 @@ def wx():
     print(request.args)
     print(request.base_url)
     print(request.cookies)
+    text = request.args.get('echostr')
 
-    return "hei"
+    return text
 
 
 if __name__ == '__main__':
