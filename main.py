@@ -4,7 +4,7 @@ import hashlib
 
 app = Flask(__name__)
 
-@app.route('/wx', methods=['GET'])
+@app.route('/', methods=['GET'])
 def wx():
     print(request.form.get("a"))
     print(request.form.get("a"))
